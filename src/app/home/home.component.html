@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="logo">
+        <img src="assets/logo.png" />
+    </div>
+
+    <div class="slider" (mousedown)="onMouseDown($event)" (mouseup)="onMouseUp($event)"
+        (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+        <button class="nav-button left" (click)="previousImage()">&#10094;</button>
+
+        <img [src]="images[currentIndex]" alt="Slider image" class="slider-image" />
+
+        <button class="nav-button right" (click)="nextImage()">&#10095;</button>
+    </div>
+
+    <div class="menu">
+        <img src = "assets/1.png">
+        <img src = "assets/2.png">
+        <img src = "assets/3.png">
+    </div>
+
+
+</body>
+
+</html>
